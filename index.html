@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app="angExp">
+    <head>
+        <title>Untitled page</title>
+        <meta name="description" content="Angular app" />
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+        
+        <script src ="/scripts/angeg-app.js"></script>
+        <script src ="/scripts/anegcontroller.js"></script>
+        <script src="/data/myData.json"> </script>
+        
+        <style>
+table, th, td {
+  border: 1px solid black;
+}
+</style>
+    </head>
+    
+    <h3>Displaying data using Angular app from the JSON file</h3>
+        
+    <body ng-controller="myControl1">
+        <div>
+            <table>
+        <tbody>
+          <tr>
+            <th>Name</th>
+            <th>Shortname</th>
+            <th>Reknown</th>
+            <th>Bio</th>
+          </tr>
+          <tr ng-repeat="item in artists.data">
+              <td>{{item.name}}</td>
+              <td>{{item.bio}}</td>
+              <td>{{item.reknown}}</td>
+              <td>{{item.shortname}}</td>
+          </tr>
+        </tbody>
+      </table>
+        </div>
+        
+    </body>
+</html>
